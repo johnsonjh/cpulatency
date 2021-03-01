@@ -1,0 +1,17 @@
+[Unit]
+Description=Set PM QoS CPU DMA Latency Constraint
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/cpulatency 0
+PrivateTmp=true
+NonBlocking=yes
+ProtectSystem=full
+ProtectHome=true
+PrivateDevices=false
+LimitNOFILE=64
+LimitCORE=0
+
+[Install]
+WantedBy=multi-user.target
