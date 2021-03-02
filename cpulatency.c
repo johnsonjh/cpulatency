@@ -1,11 +1,9 @@
 #include <errno.h>
 #include <fcntl.h>
-#include <linux/types.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/types.h>
 #include <unistd.h>
 
 static int32_t pm_qos_fd = -1;
