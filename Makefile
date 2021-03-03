@@ -41,8 +41,6 @@ strip: $(TARGET)
 		printf '%s\n' "Stripping successful!"
 
 install: strip
-	@printf '%s\n' "Stopping $(TARGET)$(SVC) ..."
-	@$(SUDO) systemctl stop $(TARGET)$(SVC) > /dev/null 2>&1
 	@printf '%s\n' "Installing $(TARGET) ..."
 	@$(SUDO) $(CP) $(TARGET) /usr/local/sbin/$(TARGET)
 	@printf '%s\n' "Installing $(TARGET)$(SVC) ..."
